@@ -200,7 +200,7 @@ def figure_html(base, f, cover=False):
     return f'<figure class="{cls}"{style}>{img}{cap}</figure>'
 
 
-WIDE = {"figure", "figgrid", "video", "youtube"}
+WIDE = {"figure", "figgrid", "video", "youtube", "split"}
 
 
 def inner_html(base, block):
@@ -215,6 +215,10 @@ def inner_html(base, block):
     if kind == "cta":
         return (f'<div class="cta"><p>{data}</p>'
                 f'<a class="cta-link" href="mailto:{C.SITE["email"]}">Write me: {C.SITE["email"]}</a></div>')
+    if kind == "split":
+        text = "".join(inner_html(base, b) for b in data["blocks"])
+        return ('<div class="split"><div class="split-text">' + text + '</div>'
+                + figure_html(base, data["figure"]) + '</div>')
     if kind == "figure":
         return figure_html(base, data)
     if kind == "figgrid":
@@ -246,7 +250,8 @@ def blocks_html(base, blocks):
     for b in blocks:
         if b[0] in WIDE:
             flush()
-            out.append('<div class="block block--wide reveal">' + inner_html(base, b) + '</div>')
+            cls = "block block--split reveal" if b[0] == "split" else "block block--wide reveal"
+            out.append('<div class="' + cls + '">' + inner_html(base, b) + '</div>')
         else:
             seg.append(inner_html(base, b))
     flush()
@@ -264,7 +269,8 @@ def build_page(slug):
         h = p["hero"]
         cls = "page-hero" + (" page-hero--contain" if h.get("contain") else "")
         hero_img = picture(base, h["src"], h["sizes"], h["alt"], loading="eager", extra=' fetchpriority="high"')
-        hero = f'<figure class="{cls}">{hero_img}</figure>'
+        hero_cap = f'<figcaption>{h["caption"]}</figcaption>' if h.get("caption") else ""
+        hero = f'<figure class="{cls}">{hero_img}{hero_cap}</figure>'
         og = f"../assets/img/{h['src']}-{max(h['sizes'])}.jpg"
     meta = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in p["meta"])
     blocks = blocks_html(base, p["blocks"])
