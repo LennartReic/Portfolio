@@ -1,150 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lennart Reichow — Urban Planning Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lennart Reichow · Urban Planner</title>
+<meta name="description" content="Portfolio of Lennart Reichow, urban planner in Copenhagen. Projects and research on public space, civil protection, collaborative governance and everyday urban life.">
+<meta property="og:title" content="Lennart Reichow · Urban Planner">
+<meta property="og:description" content="Portfolio of Lennart Reichow, urban planner in Copenhagen. Projects and research on public space, civil protection, collaborative governance and everyday urban life.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/las/dancefloor-2026-1920.jpg">
+<meta name="theme-color" content="#F6F3EE">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="site-nav">
-    <a href="index.html" class="nav-logo">Lennart Reichow</a>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
+<body class="has-hero">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main">
+  <a class="nav-brand" href="index.html">Lennart Reichow</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+<main id="main">
   <header class="hero">
+    <img class="hero-poster" src="assets/img/las/dancefloor-2026-1920.jpg" alt="" aria-hidden="true">
+    <video class="hero-video" muted loop playsinline preload="metadata" poster="assets/img/las/dancefloor-2026-1920.jpg"
+      data-src-large="assets/video/hero-loop-1600.mp4" data-src-small="assets/video/hero-loop-540.mp4" aria-hidden="true"></video>
+    <div class="hero-shade"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Urban Planning Portfolio</p>
-      <h1 class="hero-name">Lennart<br>Reichow</h1>
-      <p class="hero-tagline">Bridgebuilder between Citizens,<br>Municipalities &amp; Companies</p>
-      <p class="hero-info">
-        MSc Nordic Urban Planning Studies · Roskilde University<br>
-        Graduating July 2026 · Based in Copenhagen
-      </p>
-    </div>
-    <div class="hero-scroll" aria-hidden="true">
-      <div class="scroll-bar"></div>
-      <span>Scroll</span>
+      <div>
+        <h1 class="hero-name">Lennart<br>Reichow</h1>
+        <p class="hero-tagline">Shaping public space through interdisciplinary connection.</p>
+        <p class="hero-meta">Urban planner · MSc Nordic Urban Planning Studies · Copenhagen</p>
+      </div>
+      <blockquote class="hero-quote">
+        <p>A good city is like a good party. People stay longer than really necessary, because they are enjoying themselves.</p>
+        <cite>Jan Gehl</cite>
+      </blockquote>
     </div>
   </header>
 
-  <!-- Projects -->
-  <section class="section" id="projects">
-    <div class="section-header fade-up">
-      <h2 class="section-title">Projects</h2>
-      <span class="section-count">03 Works</span>
+  <section class="section" id="work">
+    <div class="section-head reveal">
+      <h2 class="section-title">Selected work</h2>
+      <span class="eyebrow">04 projects</span>
     </div>
-
-    <div class="cards-grid cards-grid--3">
-
-      <a href="student-study.html" class="card fade-up">
-        <span class="card-tag">Project · 2021</span>
-        <h3 class="card-title">Student Study</h3>
-        <p class="card-desc">A self-organised semester course at Zeppelin University in cooperation with the City of Friedrichshafen — planning for a climate-neutral urban district.</p>
-        <div class="card-footer">
-          <span>Zeppelin University</span>
-          <span class="card-arrow">→</span>
-        </div>
+    <div class="work-grid">
+      <a class="work-card reveal" href="work/swimming-in-the-bunker.html">
+        <div class="work-card__media"><img src="assets/img/bunker/blast-door-1800.jpg" srcset="assets/img/bunker/blast-door-1200.jpg 1200w, assets/img/bunker/blast-door-1800.jpg 1800w" sizes="(max-width: 760px) 100vw, 50vw" alt="Swimming in the Bunker" loading="lazy" decoding="async"></div>
+        <p class="eyebrow">Master thesis · Helsinki · 2026</p>
+        <h3 class="work-card__title">Swimming in the Bunker</h3>
+        <p class="work-card__desc">How institutional trust takes physical form in Helsinki's dual-use civil defence bunkers.</p>
       </a>
-
-      <a href="lyngten-bazar.html" class="card fade-up">
-        <span class="card-tag">Project · 2024</span>
-        <h3 class="card-title">Lygten Bazar</h3>
-        <p class="card-desc">A video ethnography exploring lived multicultural urbanism at Lygten Bazar in Nørrebro, Copenhagen — where diverse communities share everyday space.</p>
-        <div class="card-footer">
-          <span>Roskilde University</span>
-          <span class="card-arrow">→</span>
-        </div>
+      <a class="work-card reveal" href="work/lost-and-sound.html">
+        <div class="work-card__media"><img src="assets/img/las/dancefloor-2026-1920.jpg" srcset="assets/img/las/dancefloor-2026-1200.jpg 1200w, assets/img/las/dancefloor-2026-1920.jpg 1920w" sizes="(max-width: 760px) 100vw, 50vw" alt="Lost &amp; Sound Festival" loading="lazy" decoding="async"></div>
+        <p class="eyebrow">Site planning · Brodowin · 2025 and 2026</p>
+        <h3 class="work-card__title">Lost &amp; Sound Festival</h3>
+        <p class="work-card__desc">A festival near Berlin with the goal to create space for young artists and guests to get lost in music and space.</p>
       </a>
-
-      <a href="lost-sound.html" class="card fade-up">
-        <span class="card-tag">Project · 2025</span>
-        <h3 class="card-title">Lost &amp; Sound Festival</h3>
-        <p class="card-desc">Site Planner for a fully biological music and arts festival on an organic farm near Berlin. 500 visitors, 3 stages, and a handcrafted Snake Bench.</p>
-        <div class="card-footer">
-          <span>Brodowin, Brandenburg</span>
-          <span class="card-arrow">→</span>
-        </div>
+      <a class="work-card reveal" href="work/lygten-bazar.html">
+        <div class="work-card__media"><img src="assets/img/lygten/storefront-1920.jpg" srcset="assets/img/lygten/storefront-1200.jpg 1200w, assets/img/lygten/storefront-1920.jpg 1920w" sizes="(max-width: 760px) 100vw, 50vw" alt="Lygten Bazar" loading="lazy" decoding="async"></div>
+        <p class="eyebrow">Video ethnography · Nørrebro, Copenhagen · 2025</p>
+        <h3 class="work-card__title">Lygten Bazar</h3>
+        <p class="work-card__desc">A video ethnography of Lygten Bazar in Nørrebro, Copenhagen.</p>
       </a>
-
+      <a class="work-card reveal" href="work/student-study.html">
+        <div class="work-card__media"><img src="assets/img/student-study/poster-langes-feld-2000.jpg" srcset="assets/img/student-study/poster-langes-feld-1200.jpg 1200w, assets/img/student-study/poster-langes-feld-2000.jpg 2000w" sizes="(max-width: 760px) 100vw, 50vw" alt="Student Study: Sustainable Urban Development" loading="lazy" decoding="async"></div>
+        <p class="eyebrow">Student-led course · Friedrichshafen · 2021</p>
+        <h3 class="work-card__title">Student Study: Sustainable Urban Development</h3>
+        <p class="work-card__desc">A self-organised course at Zeppelin University in cooperation with the City of Friedrichshafen.</p>
+      </a>
     </div>
   </section>
 
-  <!-- Research -->
   <section class="section" id="research">
-    <div class="section-header fade-up">
+    <div class="section-head reveal">
       <h2 class="section-title">Research</h2>
-      <span class="section-count">04 Studies</span>
+      <span class="eyebrow">04 studies</span>
     </div>
-
-    <div class="cards-grid cards-grid--2">
-
-      <a href="city-apps.html" class="card fade-up">
-        <span class="card-tag">Research · 2023</span>
-        <h3 class="card-title">Effects of Collaborative Innovation on City Apps</h3>
-        <p class="card-desc">How do municipalities develop digital public services? A comparative case study examining governance, collaboration and platform design across four German cities.</p>
-        <div class="card-footer">
-          <span>Zeppelin University · Humboldt Project</span>
-          <span class="card-arrow">→</span>
-        </div>
+    <div class="research-list">
+      <a class="research-row reveal" href="research/city-apps.html">
+        <span class="research-row__num">01</span>
+        <span>
+          <span class="research-row__title">City Apps</span>
+          <p class="research-row__q">How do municipalities develop city apps? A comparative case study.</p>
+        </span>
+        <span class="research-row__meta">Humboldt Project · Zeppelin University · 2022</span>
+        <span class="research-row__arrow" aria-hidden="true">→</span>
       </a>
-
-      <a href="strategic-partnerships.html" class="card fade-up">
-        <span class="card-tag">Research · 2023</span>
-        <h3 class="card-title">Strategic Partnerships</h3>
-        <p class="card-desc">Empirical findings on how trust shapes collaboration between city administrations, municipal companies and private startups in digital service provision.</p>
-        <div class="card-footer">
-          <span>Zeppelin University · Bachelor Thesis</span>
-          <span class="card-arrow">→</span>
-        </div>
+      <a class="research-row reveal" href="research/strategic-partnerships.html">
+        <span class="research-row__num">02</span>
+        <span>
+          <span class="research-row__title">Strategic Partnerships</span>
+          <p class="research-row__q">How is trust impacting collaboration?</p>
+        </span>
+        <span class="research-row__meta">Bachelor thesis · Zeppelin University · 2023</span>
+        <span class="research-row__arrow" aria-hidden="true">→</span>
       </a>
-
-      <a href="adult-play.html" class="card fade-up">
-        <span class="card-tag">Research · 2025</span>
-        <h3 class="card-title">Adult Play in Public Spaces</h3>
-        <p class="card-desc">How can urban spaces be planned to encourage adult play? A practice-theory study of Guldbergs Plads and Fælledparken in Copenhagen — and a planner's checklist.</p>
-        <div class="card-footer">
-          <span>Roskilde University · Group Project</span>
-          <span class="card-arrow">→</span>
-        </div>
+      <a class="research-row reveal" href="research/adult-play.html">
+        <span class="research-row__num">03</span>
+        <span>
+          <span class="research-row__title">Adult Play in Public Spaces</span>
+          <p class="research-row__q">How can we design public spaces to make adults play?</p>
+        </span>
+        <span class="research-row__meta">Group project · Roskilde University · 2024</span>
+        <span class="research-row__arrow" aria-hidden="true">→</span>
       </a>
-
-      <a href="helsinki-tallinn.html" class="card fade-up">
-        <span class="card-tag">Research · 2024</span>
-        <h3 class="card-title">Helsinki–Tallinn Twin City Strategy</h3>
-        <p class="card-desc">Rethinking the Helsinki–Tallinn twin city strategy through planning practices and collaborative governance — viewed from both institutional and grassroots perspectives.</p>
-        <div class="card-footer">
-          <span>Roskilde University · Group Project</span>
-          <span class="card-arrow">→</span>
-        </div>
+      <a class="research-row reveal" href="research/helsinki-tallinn.html">
+        <span class="research-row__num">04</span>
+        <span>
+          <span class="research-row__title">Helsinki-Tallinn Twin City Strategy</span>
+          <p class="research-row__q">How is the relationship perceived from above and below?</p>
+        </span>
+        <span class="research-row__meta">Group project · Roskilde University · 2025</span>
+        <span class="research-row__arrow" aria-hidden="true">→</span>
       </a>
-
     </div>
   </section>
 
-  <!-- Contact -->
-  <footer class="contact-section" id="contact">
-    <div>
-      <p class="contact-label">Get in touch</p>
-      <a class="contact-email" href="mailto:lennart.reichow@gmail.com">
-        lennart.reichow@gmail.com
-      </a>
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <h2 class="section-title">About</h2>
+      <span class="eyebrow">Lennart Reichow</span>
     </div>
-    <div class="footer-meta">
-      <span>Lennart Reichow</span><br>
-      <span>+49 157 3620 0919</span><br>
-      <span>Copenhagen, Denmark</span>
+    <div class="about reveal">
+      <img class="about-portrait" src="assets/img/about/portrait-1200.jpg" alt="Portrait of Lennart Reichow" loading="lazy" width="886" height="886">
+      <div class="about-text">
+        <p>I am an urban planner with an MSc in Nordic Urban Planning Studies, combining urban strategy, public-sector consulting and business development. I bring together public and private stakeholders to shape public space.</p><p>My master's thesis looked at Helsinki's civil defence bunkers and urban resilience. Before that, I developed Smart City strategies for municipalities, facilitated stakeholder workshops and learned to translate complex topics to anyone. I am also the site planner of a small festival near Berlin, which is urban planning in miniature.</p>
+        <dl class="about-facts"><div><dt class="eyebrow">Based in</dt><dd>Copenhagen, Denmark</dd></div><div><dt class="eyebrow">Languages</dt><dd>German (native), English (fluent), French and Spanish (basics)</dd></div><div><dt class="eyebrow">Education</dt><dd>MSc Nordic Urban Planning Studies, Roskilde University (2026)<br>BA Sociology, Politics &amp; Economics, Zeppelin University (2023)</dd></div><div><dt class="eyebrow">Experience</dt><dd>Smart City consulting (City &amp; Bits), public affairs (Cosmonauts &amp; Kings), business development and sales in Copenhagen</dd></div></dl>
+        <div class="about-links">
+          <a href="assets/cv-lennart-reichow.pdf" target="_blank" rel="noopener">Download CV (PDF) ↗</a>
+          <a href="https://www.linkedin.com/in/lennart-reichow/" target="_blank" rel="me noopener">LinkedIn ↗</a>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="cursor.js"></script>
-  <script src="scroll.js"></script>
+  <section class="section" id="contact">
+    <div class="section-head reveal">
+      <h2 class="section-title">Contact</h2>
+      <span class="eyebrow">Get in touch</span>
+    </div>
+    <div class="reveal">
+      <p class="contact-lead">Interested in my work? I'm happy to hear from you.</p>
+      <a class="contact-email" href="mailto:lennart.reichow@gmail.com">lennart.reichow@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/lennart-reichow/" target="_blank" rel="me noopener">LinkedIn ↗</a>
+        <span>Copenhagen, Denmark</span>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <span>© 2026 Lennart Reichow · Copenhagen</span>
+  <span><a href="mailto:lennart.reichow@gmail.com">lennart.reichow@gmail.com</a> · <a href="https://www.linkedin.com/in/lennart-reichow/" rel="me noopener" target="_blank">LinkedIn</a></span>
+</footer>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
