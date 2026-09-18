@@ -56,8 +56,16 @@
       hero.src = small ? hero.getAttribute('data-src-small') : hero.getAttribute('data-src-large');
       hero.muted = true;
       hero.load();
-      var p = hero.play();
-      if (p && p.catch) p.catch(function () {});
+      var tryPlay = function () {
+        if (hero.paused && !document.hidden) {
+          var p = hero.play();
+          if (p && p.catch) p.catch(function () {});
+        }
+      };
+      tryPlay();
+      // Browsers pause video in background tabs, so start again once the page is looked at.
+      document.addEventListener('visibilitychange', tryPlay);
+      hero.addEventListener('canplay', tryPlay);
     }
   }
 
