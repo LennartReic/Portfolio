@@ -11,7 +11,7 @@ SITE = {
     "description": "Portfolio of Lennart Reichow, urban planner in Copenhagen. Projects and research on public space, civil protection, collaborative governance and everyday urban life.",
     "quote": "A good city is like a good party. People stay longer than really necessary, because they are enjoying themselves.",
     "quote_by": "Jan Gehl",
-    "youtube_las": "nn3u1KvwxLU",
+    "youtube_las": "332eePCzLOc",
     "youtube_lygten": "IEmJo--uLfQ",
 }
 
@@ -169,7 +169,7 @@ PAGES["lost-and-sound"] = {
         ("h2", "Overview"),
         ("p", "Lost &amp; Sound is a fully biological music and arts festival that takes place on the grounds of an organic farm in Brodowin. It is conceived as an immersive space rather than a conventional event: there is no clear separation between audience and performers, no fixed paths, and no single way to experience the festival. Visitors are participants, moving freely between music, quiet moments, nature and spontaneous encounters."),
         ("p", "Founded by five students and realised through the commitment of many volunteers, the festival aims to give small and emerging artists a stage and to create an environment where self-expression, connection and sustainability are lived practices rather than abstract ideas. By 2026, Lost &amp; Sound has grown to 850 visitors, with four stages and a wide range of informal spaces in between: places to dance, to pause, to meet others, or to get lost for a while. The festival balances collective energy with intimacy, creating a temporary landscape where music, people and environment merge."),
-        ("youtube", {"id": "nn3u1KvwxLU", "poster": "las/night-aerial-2026-alt", "sizes": [1200, 2000], "title": "Lost & Sound Festival 2026, night flight over the site", "caption": "Night flight over the festival site, 2026. Video opens on YouTube."}),
+        ("youtube", {"id": "332eePCzLOc", "poster": "las/night-aerial-2026-alt", "sizes": [1200, 2000], "title": "Lost & Sound Festival 2026, night flight over the site", "caption": "Night flight over the festival site, 2026. Video opens on YouTube."}),
         ("split", {
             "figure": {"src": "las/explaining-plan", "sizes": [1200], "alt": "Lennart explaining the site plan drawn on a large concrete wall", "caption": "Explaining the site plan to the team on site."},
             "blocks": [
