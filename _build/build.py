@@ -12,6 +12,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "_build"))
 import content as C  # noqa: E402
 
+BASE_URL = "https://lennartreic.github.io/Portfolio/"
+
 FONT_LINK = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -34,8 +36,10 @@ def picture(base, name, sizes, alt, sizes_attr="100vw", cls="", loading="lazy", 
             f'alt="{html.escape(alt, quote=True)}" loading="{loading}" decoding="async"{extra}>')
 
 
-def head(base, title, description, og_image=None):
-    og = f'{base}assets/img/las/dancefloor-2026-1920.jpg' if og_image is None else og_image
+def head(base, title, description, og_image=None, page_rel=""):
+    # Absolute URLs, otherwise LinkedIn, Slack and WhatsApp show no preview image.
+    og = BASE_URL + (og_image or "assets/img/las/dancefloor-2026-1920.jpg")
+    url = BASE_URL + page_rel
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +51,10 @@ def head(base, title, description, og_image=None):
 <meta property="og:description" content="{html.escape(description, quote=True)}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="{og}">
+<meta property="og:url" content="{url}">
+<meta property="og:site_name" content="Lennart Reichow">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="{url}">
 <meta name="theme-color" content="#F6F3EE">
 <link rel="icon" href="{base}favicon.svg" type="image/svg+xml">
 {FONT_LINK}
@@ -114,7 +122,7 @@ def build_index():
     about_ps = "".join(f"<p>{p}</p>" for p in C.ABOUT["paragraphs"])
     poster = "assets/img/las/dancefloor-2026-1920.jpg"
 
-    return f"""{head(base, f"{s['name']} · Urban Planner", s['description'])}
+    return f"""{head(base, f"{s['name']} · Urban Planner", s['description'], page_rel="")}
 <body class="has-hero">
 {nav(base)}
 <main id="main">
@@ -271,7 +279,7 @@ def build_page(slug):
         hero_img = picture(base, h["src"], h["sizes"], h["alt"], loading="eager", extra=' fetchpriority="high"')
         hero_cap = f'<figcaption>{h["caption"]}</figcaption>' if h.get("caption") else ""
         hero = f'<figure class="{cls}">{hero_img}{hero_cap}</figure>'
-        og = f"../assets/img/{h['src']}-{max(h['sizes'])}.jpg"
+        og = f"assets/img/{h['src']}-{max(h['sizes'])}.jpg"
     meta = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in p["meta"])
     blocks = blocks_html(base, p["blocks"])
 
@@ -283,7 +291,7 @@ def build_page(slug):
     nxt_label = "Next project" if nxt["section"] == "work" else "Next research project"
 
     plain_title = html.unescape(p["title"])
-    return f"""{head(base, f"{plain_title} · {C.SITE['name']}", p['description'], og)}
+    return f"""{head(base, f"{plain_title} · {C.SITE['name']}", p['description'], og, f"{section}/{slug}.html")}
 <body class="subpage">
 {nav(base, current)}
 <main id="main">
